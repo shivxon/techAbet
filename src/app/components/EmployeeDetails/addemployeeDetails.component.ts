@@ -40,6 +40,7 @@ export class EmployeeDetailsComponent {
         (data) => {
           if ((data.message = "sucess")) {
             console.log("Good");
+            this.router.navigateByUrl("/");
           }
         },
         (err) => {
