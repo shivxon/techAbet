@@ -768,7 +768,7 @@ document.addEventListener('DOMContentLoaded', () => {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/vahishtha/project/All_Project_agile/Assignment_project/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /home/vahishtha/project/All_Project_agile/Techabet/src/main.ts */"./src/main.ts");
 
 
 /***/ })

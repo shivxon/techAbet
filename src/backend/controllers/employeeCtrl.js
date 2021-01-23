@@ -2,7 +2,7 @@ var Employee = require('../models/employee');
 const { sendEmployeeDataEmail } = require('../emails/composeAndSend/employeeData')
 
 
-const addbrand = async(req, res) => {
+const employee = async(req, res) => {
     body = req.body
     image = req.body.profile_image
 
@@ -92,7 +92,7 @@ const EditedEmployeesDetails = async(req, res) => {
 
 
 module.exports = {
-    addbrand,
+    employee,
     showEmployees,
     showSingleEmployees,
     deleteEmployee,
