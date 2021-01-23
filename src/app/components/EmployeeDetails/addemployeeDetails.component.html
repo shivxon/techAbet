@@ -1,0 +1,54 @@
+<div class="container">
+    <div align="center" class="column">
+        <h1 style="color: rgb(15, 15, 14); margin-bottom: 50px">
+            Employee Details
+        </h1>
+    </div>
+    <div class="form_bg">
+        <form [formGroup]="employeeForm">
+            <div class="form-group" style="margin-top: 50px">
+                <div style="width: 400px; padding-top: 50px; margin-left: 150px">
+                    <div style="color: black">Name</div>
+                    <input class="form-control" type="text" formControlName="name" />
+                </div>
+            </div>
+            <div class="form-group" style="margin-top: 10px">
+                <div style="width: 400px; margin-left: 150px">
+                    <div style="color: black">Age</div>
+                    <input class="form-control" type="number" formControlName="age" />
+                </div>
+            </div>
+            <div class="form-group" style="margin-top: 10px">
+                <div style="width: 400px; margin-left: 150px">
+                    <div style="color: black">Phone</div>
+                    <input class="form-control" type="number" formControlName="phone" />
+                </div>
+            </div>
+            <div class="form-group" style="margin-top: 10px">
+                <div style="width: 400px; margin-left: 150px">
+                    <div style="color: black">Email</div>
+                    <input class="form-control" type="text" formControlName="email" />
+                </div>
+            </div>
+            <div class="form-group" style="margin-top: 10px">
+                <div style="width: 400px; margin-left: 150px">
+                    <div style="color: black">Salary</div>
+                    <input class="form-control" type="number" formControlName="salary" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div style="width: 400px; padding-top: 50px; margin-left: 150px">
+                    <div style="color: black">Profile Image</div>
+                    <input type="file" accept="image/*" formControlName="profile_image" />
+                </div>
+            </div>
+
+            <div class="form-group" style="margin-top: 50px; margin-left: 250px">
+                <button class="btn btn-primary" (click)="addEmployeeDetails(employeeForm)">
+          Add Details
+        </button>
+            </div>
+        </form>
+    </div>
+</div>

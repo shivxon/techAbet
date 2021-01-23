@@ -1,0 +1,56 @@
+<div class="container">
+    <div align="center" class="column">
+        <h1 style="color: rgb(15, 15, 14); margin-bottom: 50px">
+            Edit Your Details
+        </h1>
+        <div class="form_bg">
+            <form [formGroup]="EditForm">
+                <div class="form-field" style="color: black">
+                    <div class="form-group" style="margin-left: 30px; margin-top: 50px">
+                        <div style="width: 400px">
+                            <label>Name</label>
+                            <input class="form-control" type="text" formControlName="name" [(ngModel)]="name" />
+                        </div>
+                    </div>
+                    <div class="form-group" style="margin-left: 30px; margin-top: 20px">
+                        <div style="width: 400px">
+                            <label>Age</label>
+                            <input class="form-control" type="number" formControlName="age" [(ngModel)]="age" />
+                        </div>
+                    </div>
+                    <div class="form-group" style="margin-left: 30px; margin-top: 20px">
+                        <div style="width: 400px">
+                            <label>Phone</label>
+                            <input class="form-control" type="number" formControlName="phone" [(ngModel)]="phone" />
+                        </div>
+                    </div>
+                    <div class="form-group" style="margin-left: 30px; margin-top: 20px">
+                        <div style="width: 400px">
+                            <label>Email</label>
+                            <input class="form-control" type="text" formControlName="email" [(ngModel)]="email" />
+                        </div>
+                    </div>
+                    <div class="form-group" style="margin-left: 30px; margin-top: 20px">
+                        <div style="width: 400px">
+                            <label>Salary</label>
+                            <input class="form-control" type="number" formControlName="salary" [(ngModel)]="salary" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div style="width: 400px; padding-top: 20px; margin-left: 150px">
+                            <div style="color: black">Profile Image</div>
+                            <img src="{{ profileImage }}" alt="image" width="100" height="100" />
+                            <input type="file" accept="image/*" formControlName="profile_image" />
+                        </div>
+                    </div>
+                    <br /><br />
+                    <div class="form-group" style="margin-left: 400px; margin-top: 100px">
+                        <button type="button" class="btn btn-primary" (click)="edit(EditForm)">
+              Update Details
+            </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
