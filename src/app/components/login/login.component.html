@@ -1,0 +1,30 @@
+<div class="container">
+    <div align="center" class='column'>
+
+        <div class="form_bg">
+            <h1>Login</h1>
+            <form [formGroup]="LoginForm">
+
+
+                <div class="form-group">
+                    <input class='form-control' placeholder="Email" type="email" formControlName="email">
+                </div>
+
+                <br>
+                <div class="form-group">
+                    <input class='form-control' placeholder="Password" type="password" formControlName="password">
+                </div>
+
+                <br>
+                <br>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary" (click)="login(LoginForm)">LOGIN</button>
+                </div>
+                <br>
+                <a routerLinkActive="active" routerLink="/forgotpassword">
+          Forget Password
+        </a>
+            </form>
+        </div>
+    </div>
+</div>

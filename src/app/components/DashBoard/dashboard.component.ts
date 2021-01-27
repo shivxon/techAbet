@@ -10,29 +10,30 @@ import { HttpClient } from "@angular/common/http";
   styleUrls: ["./dashboard.component.css"],
 })
 export class DashboardComponent {
-  EmployeeData;
+  ProductData;
   id;
   constructor(private router: Router, private http: HttpClient) {
-    this.http.get(environment.API_BASE_V1 + "/show_emp").subscribe((data) => {
-      this.EmployeeData = data;
-      console.log(data);
-    });
+    this.http
+      .get(environment.API_BASE_V1 + "/show_product")
+      .subscribe((data) => {
+        this.ProductData = data;
+        console.log(data);
+      });
   }
 
-  editEmployeeDetails(id: any) {
+  editProductDetails(id: any) {
     console.log(id);
-    this.router.navigateByUrl("employee_details/" + id + "/edit");
   }
   deleteEmployeeDetails(id: any) {
     console.log(id);
     this.http
-      .post(environment.API_BASE_V1 + "/delete_employee", { params: id })
+      .post(environment.API_BASE_V1 + "/delete_product", { params: id })
       .subscribe((data: any) => {
         if ((data.message = "succces")) {
           this.http
-            .get(environment.API_BASE_V1 + "/show_emp")
+            .get(environment.API_BASE_V1 + "/show_product")
             .subscribe((data) => {
-              this.EmployeeData = data;
+              this.ProductData = data;
               console.log(data);
             });
         }
@@ -40,6 +41,6 @@ export class DashboardComponent {
   }
 
   NewEmployee() {
-    this.router.navigateByUrl("/employee");
+    this.router.navigateByUrl("/");
   }
 }

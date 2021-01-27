@@ -9,45 +9,35 @@
         <form style="margin-top: 50px">
             <div class="form-field">
                 <div style="margin-left: 10px; color: black" class="form-data">
-                    <div style="margin-left: 50px; width: 160px; margin-top: 30px">
-                        <h3>Name</h3>
-                        <div *ngFor="let data of EmployeeData" style="margin-top: 30px">
-                            {{ data.name }}
+
+                    <div style="width: 160px; margin-top: 30px">
+                        <h3>Product</h3>
+                        <div *ngFor="let data of ProductData" style="margin-top: 30px">
+                            {{ data.price }}
                         </div>
                     </div>
                     <div style="width: 160px; margin-top: 30px">
-                        <h3>Profile</h3>
-                        <div *ngFor="let data of EmployeeData" style="margin-top: 30px">
-                            <img src="{{ data.image }}" alt="image" width="100" height="100" />
+                        <h3>Price</h3>
+                        <div *ngFor="let data of ProductData" style="margin-top: 30px">
+                            {{ data.price }}
                         </div>
                     </div>
                     <div style="width: 160px; margin-top: 30px">
-                        <h3>Age</h3>
-                        <div *ngFor="let data of EmployeeData" style="margin-top: 30px">
-                            {{ data.age }}
+                        <h3>Total</h3>
+                        <div *ngFor="let data of ProductData" style="margin-top: 30px">
+                            {{ data.quantity_totak }}
                         </div>
                     </div>
-                    <div style="width: 160px; margin-top: 30px">
-                        <h3>Salary</h3>
-                        <div *ngFor="let data of EmployeeData" style="margin-top: 30px">
-                            {{ data.salary }}
-                        </div>
-                    </div>
-                    <!-- <div style="width: 160px; margin-top: 30px">
-                        <h3>Phone</h3>
-                        <div *ngFor="let data of EmployeeData" style="margin-top: 30px">
-                            {{ data.phone }}
-                        </div>
-                    </div> -->
+
                     <div style="width: 250px; margin-top: 30px">
                         <h3>Action</h3>
-                        <div *ngFor="let data of EmployeeData" style="margin-top: 10px">
+                        <div *ngFor="let data of ProductData" style="margin-top: 10px">
                             <small>
                 <span
                   ><button
                     style="margin-left: 5px"
                     class="btn btn-primary"
-                    (click)="editEmployeeDetails(data._id)"
+                    (click)="editProductDetails(data._id)"
                   >
                     <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                     Edit
@@ -57,7 +47,7 @@
                             <span><button
                   style="margin-left: 5px"
                   class="btn btn-primary"
-                  (click)="deleteEmployeeDetails(data._id)"
+                  (click)="deleteProductDetails(data._id)"
                 >
                   <i class="fa fa-trash" aria-hidden="true"></i></button
               ></span>

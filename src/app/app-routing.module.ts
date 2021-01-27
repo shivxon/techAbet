@@ -1,25 +1,25 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
-import { EditComponent } from "./components/Edit/edit.component";
-import { EmployeeDetailsComponent } from "./components/EmployeeDetails/addemployeeDetails.component";
-
 import { DashboardComponent } from "./components/DashBoard/dashboard.component";
-
+import { SignUpFormComponent } from "./components/signup/signup.component";
+import { LogInFormComponent } from "./components/login/login.component";
+import { AdminGuardService as AdminGuard } from "../app/gaurd/adminGuard.service";
 const routes: Routes = [
   {
-    path: "",
+    path: "admin/dashboard",
+    canActivate: [AdminGuard],
     pathMatch: "full",
     component: DashboardComponent,
   },
   {
-    path: "employee_details/:id/edit",
+    path: "signup",
     pathMatch: "full",
-    component: EditComponent,
+    component: SignUpFormComponent,
   },
   {
-    path: "employee",
+    path: "login",
     pathMatch: "full",
-    component: EmployeeDetailsComponent,
+    component: LogInFormComponent,
   },
 ];
 
